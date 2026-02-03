@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    #main{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+
+    .card1{
+        width: 30%;
+        height:800px;
+        border: #e8e8e8 solid 1px;
+        position: relative;
+        top: 330px;
+        border-radius: 15px;
+        margin: 0 30px 0 30px;
+        box-shadow: 0 5px 50px rgba(0,0,0,0.3);
+        background: #ffffff;
+    }
+
+    .card1 h1{position: relative; left: 120px;}
+
+    .card1 p{text-align: center; width: 170px; position: relative; left: 68px; top:-10px;}
+
+    .cards {
+        display: flex;          /* включаем flex */
+        gap: 20px;              /* расстояние между карточками */
+        justify-content: center;/* центрируем по горизонтали */
+    }
+
+    ul li{
+        line-height: 2.5;
+    }
+
+    .addon{
+        border-radius: 8px;
+        border: #e8e8e8 solid 1px;
+        width: 30%;
+        height: 200px;
+        display: inline-block;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .addon h1, .addon p{
+        padding: 10px;
+    }
+
+    .addon:hover{
+        transform: scale(1.03);
+        box-shadow: 0 12px 18px rgba(0,0,0,0.16);
+    }
+
+    #addons{
+        left: 10px;
+        margin: 0 20px 0 20px;
+        position: relative;
+        flex-wrap: wrap;
+        margin-top: 400px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .black_btn{
+        font-size: 15px;
+        font-weight: bold;
+        background: #323232;
+    }
+
+    .black_btn:hover{
+        background: linear-gradient(45deg, #504f4f, #404040, #323232);
+    }
+
+    .white_btn{
+        font-size: 15px;
+        font-weight: bold;
+        z-index: 10;
+        background: white;
+        border: #e3e3e3 solid 2px;
+        transition: background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+
+    }
+
+    .white_btn:hover{
+        border-color: #000000;
+        /*text-decoration: underline;*/
+    }
+
+  </style>
+</head>
+<body>
+  <div class="cards">
+  <div id="main">
+    <h1 style="font-size: 60px;">Try the Copilot-powered platform</h1>
+    <p style="width: 900px; position:relative; left: 190px;">We get it, there's a lot you can do with GitHub. That’s why we've packed all of it into a single risk-free trial that includes GitHub Enterprise, Copilot, and Advanced Security.</p>
+    <button class="black_btn" style="width: 200px; height: 45px; color: #ffffff; border-radius: 6px;">Start free for 30 days</button>
+  </div>
+
+  <div class="card1">
+    <h1 >Free</h1>
+    <p >The basics for individuals
+      and organizations</p>
+    <p><strong>0USD per uder/month</strong></p>
+    <button class="white_btn" style="width: 300px; height: 45px; color: #000000; border-radius: 6px; position: relative; left: 5px; box-shadow: none">Join for free</button>
+    <ul>
+      <li>Unlimited public/private repositories</li>
+      <li>Deoendabot security and version updates</li>
+      <li>2,000 CI/CD minutes/month</li>
+      <li>500MB packages of storage</li>
+      <li>Issues & Projects</li>
+      <li>Community support</li>
+    </ul>
+  </div>
+
+  <div class="card1">
+    <h1>Team</h1>
+    <p style="width:200px;">Advanced collaboration for
+      individuals and organizations</p>
+    <p style="position: relative; left: 80px;"><strong>4USD per uder/month</strong></p>
+    <button class="black_btn" style="width: 300px; height: 45px; color: #ffffff; border-radius: 6px; position:relative; left:5px;">Continue with Team</button>
+    <ul>
+      <li>Access to GitHub Codespaces</li>
+      <li>Repository rules</li>
+      <li>Multiple reviews in pull requests</li>
+      <li>Draft pull requests</li>
+      <li>Code owners</li>
+      <li>Required reviews</li>
+    </ul>
+  </div>
+
+  <div style="background-color: #0E71E7; width: 348px; height: 80px; position: absolute; top: 305px; left: 878.5px; z-index: -1; border-radius: 10px; text-align: center; color: #ffffff;">
+    <p>Recommended</p>
+  </div>
+  <div class="card1" style="border: #0E71E7 solid 5px;">
+    <h1 style="position: relative; left:100px;">Enterprise</h1>
+    <p style="position: relative; left:90px;">Security, compliance,
+      and flexible deployment</p>
+    <p style="position: relative; left:90px;"><strong>21USD per uder/month</strong></p>
+    <button class="black_btn" style="width: 150px; height: 45px; color: #ffffff; border-radius: 6px; margin: 0 5px 0 10px;">Start a free trial</button>
+    <button class="white_btn" style="width: 150px; height: 45px; color: #ffffff; border-radius: 6px; margin: 0 10px 0 5px; color: #000000;">Contact sales</button>
+    <ul>
+      <li>Data residency</li>
+      <li>Enterprise Managed Users</li>
+      <li>User provisioning trough SCIM</li>
+      <li>Enterprise Account to centrally manage multiple organizations</li>
+      <li>Environment protection rules</li>
+      <li>Repository rules</li>
+    </ul>
+  </div>
+  </div>
+
+  <h1 style="position: relative; left:365px; top:350px; font-size: 60px;">Additional add-ons</h1>
+
+  <div id="addons">
+    <div class="addon">
+      <p style="color: #b600f3"><strong>GitHub Copilot</strong></p>
+      <p>Get started for free with up to 2,000 completions and 50 chat requests per month.</p>
+    </div>
+    <br>
+    <div class="addon">
+      <p style="color: #10f300"><strong>GitHub Models</strong></p>
+      <p>Bring industry-leading AI into your workflow, securely, scalably, and with full developer control.</p>
+    </div>
+    <br>
+    <div class="addon">
+      <p style="color: #00c6f3"><strong>GitHub Advanced Security</strong></p>
+      <p>Gain peace of mind with our security, privacy, and responsible AI policies.</p>
+    </div>
+    <div class="addon">
+      <p style="color: #f30041"><strong>GitHub Codespaces</strong></p>
+      <p>Starting at $0.18 per hour of compute and $0.07 per GB of storage.</p>
+    </div>
+    <br>
+    <div class="addon">
+      <p style="color: #f39e00"><strong>Premium Support</strong></p>
+      <p>Get expert help for Enterprise Cloud and Enterprise-any hour your team needs it.</p>
+    </div>
+    <br>
+    <div class="addon">
+      <p style="color: #f3d300"><strong>Git Large File Storage</strong></p>
+      <p>$5 per month for 50 GB bandwidth and 50 GB of storage.</p>
+    </div>
+  </div>
+</body>
+</html>
