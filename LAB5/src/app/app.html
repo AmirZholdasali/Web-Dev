@@ -1,0 +1,25 @@
+<div class="app-container">
+  <h1>🛒 Online Store</h1>
+
+  <!-- кнопка категория -->
+  <nav class="categories">
+    @for (cat of categories; track cat.id) {
+      <button
+        (click)="selectCategory(cat)"
+        [class.active]="selectedCategory?.id === cat.id"
+        class="category-btn">
+        {{ cat.name }}
+      </button>
+    }
+  </nav>
+
+  <!-- список товаров или выбери кат -->
+  @if (selectedCategory) {
+    <app-product-list
+      [products]="filteredProducts"
+      (productDeleted)="onProductDeleted($event)">
+    </app-product-list>
+  } @else {
+    <p class="welcome">👆 Select a category to view products</p>
+  }
+</div>
